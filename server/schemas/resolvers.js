@@ -4,7 +4,7 @@ const resolvers = {
     Query: {
         thoughts: async (parent, { username }) => {
             const params = username ? { username } : {};
-            return Thought.find().sort({ createdAt: -1 });
+            return Thought.find(params).sort({ createdAt: -1 });
         }
     }
 };
